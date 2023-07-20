@@ -1,6 +1,14 @@
-## Where Did Himeko Get Coffee?
+<h3 align="center">Where Did Himeko Get Coffee?</h1>
 
-![Himeko](public/himeko.png)
+---
+
+<p align="center">
+  <img src="public/himeko.png" />
+</p>
+
+---
+
+WIP Next.js project replicating Honkai Star Rail's Map UI and a map of various locations with my favorite (and potentially others!) coffee shops.
 
 ## Getting Started
 
