@@ -7,7 +7,7 @@ import { init } from "next/dist/compiled/@vercel/og/satori";
 
 type ModalView = "location" | "shop";
 
-type ModalContextType = {
+export type ModalContextType = {
   view: ModalView;
   locations: {
     id: string;

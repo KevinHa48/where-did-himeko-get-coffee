@@ -14,13 +14,13 @@
     theme("colors.hsr-dark") 50%,
     theme("colors.hsr-grey") 50%
   );
-  background-size: 300% 100%;
-  background-position: right bottom;
-  transition: all 0.75s;
+  background-size: 200% 100%;
+  background-position: right;
 }
 
-.active-location-item {
-  background-position: left bottom;
+.location-item.active {
+  @apply outline-hsr-light text-hsr-light bg-left;
+  transition: all 0.5s;
 }
 
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/*/
@@ -75,6 +75,43 @@ input[type="range"]::-moz-range-thumb {
   background-color: #f3f3f3;
   height: 1rem;
   width: 1rem;
+}
+
+/* Credit: https://codepen.io/t_afif/pen/wvdvYPJ */
+
+.arrow-3 {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+}
+.arrow-3:before {
+  content: "";
+  flex: 1;
+  margin: 0 10px;
+  background: white;
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a3 0.5s infinite alternate;
+}
+
+.arrow-3:after {
+  --s: -1;
+}
+@keyframes a3 {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(-4px);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(4px);
+  }
 }
 
 body {

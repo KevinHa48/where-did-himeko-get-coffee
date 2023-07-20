@@ -7,7 +7,7 @@ import Modal from "./Modal";
 export default function Home() {
   return (
     <ModalProvider>
-      <main className="flex flex-col min-h-screen px-24 py-14 text-hsr-dark">
+      <main className="flex flex-col min-h-screen px-24 py-14 md:py-8 text-hsr-dark">
         <div className="z-10 w-full max-w-4xl text-sm lg:flex">
           <div className="flex space-y-3">
             <span>
@@ -21,7 +21,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex h-[75vh] my-10 grow">
+        <div className="flex h-[75vh] my-10 md:my-2 grow">
           <CoffeeMap />
           <Modal />
         </div>
