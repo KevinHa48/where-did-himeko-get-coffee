@@ -1,0 +1,27 @@
+{
+  "locations": [
+    {
+      "id": "hoboken",
+      "location": "Hoboken, NJ",
+      "coffee_shops": [
+        {
+          "name": "Joboken",
+          "description": "A pretty cool coffee spot near the PATH station, highly recommend their cold brew and the Brooklyn blend of their beans!",
+          "location": [-60, 38],
+          "site_url": "https://jobokencafe.com/"
+        },
+        {
+          "name": "Bean Vault Coffee",
+          "description": "Another real cool spot near the PATH station, it's tucked away in a nice corner. This is my current favorite spot and where I source my beans from (Sweetleaf)!",
+          "location": [-56, 42],
+          "site_url": "https://www.beanvaultcoffee.com/"
+        }
+      ],
+      "leaflet_map_url": "./hoboken/{z}/{x}/{y}.png"
+    },
+    {
+      "id": "unavailable",
+      "location": "Coming Soon..."
+    }
+  ]
+}
