@@ -1,4 +1,4 @@
-<h3 align="center">Where Did Himeko Get Coffee?</h1>
+<h2 align="center">Where Did Himeko Get Coffee?</h1>
 
 ---
 
