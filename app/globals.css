@@ -21,6 +21,7 @@
 .location-item.active {
   @apply outline-hsr-light text-hsr-light bg-left;
   transition: all 0.5s;
+  list-style-image: url("../public/hsr_star_light.svg");
 }
 
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/*/
@@ -77,35 +78,24 @@ input[type="range"]::-moz-range-thumb {
   width: 1rem;
 }
 
+li {
+  list-style-image: url("../public/hsr_star.svg");
+}
+
+li::marker {
+  font-size: 2.5em;
+}
+
 /* Credit: https://codepen.io/t_afif/pen/wvdvYPJ */
 
-.arrow-3 {
-  width: 50px;
-  height: 30px;
-  display: flex;
-  position: absolute;
-}
-.arrow-3:before {
-  content: "";
-  flex: 1;
-  margin: 0 10px;
-  background: white;
-  clip-path: polygon(
-    0 10px,
-    calc(100% - 15px) 10px,
-    calc(100% - 15px) 0,
-    100% 50%,
-    calc(100% - 15px) 100%,
-    calc(100% - 15px) calc(100% - 10px),
-    0 calc(100% - 10px)
-  );
-  animation: a3 0.5s infinite alternate;
+.selection-arrow {
+  animation: bounce 0.5s infinite alternate;
 }
 
-.arrow-3:after {
+.selection-arrow:after {
   --s: -1;
 }
-@keyframes a3 {
+@keyframes bounce {
   0% {
     transform: scaleX(var(--s, 1)) translate(-4px);
   }

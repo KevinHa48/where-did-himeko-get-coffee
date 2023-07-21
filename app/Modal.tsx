@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ModalContext, ModalContextType } from "./ModalContext";
 import { Dispatch } from "react";
+import SelectionArrow from "./SelectionArrow";
 
 const LocationView = ({
   state,
@@ -22,7 +23,7 @@ const LocationView = ({
         </span>
       </div>
       <div className="bg-hsr-grey flex flex-col text-hsr-dark font-medium grow">
-        <ul className="list-disc list-inside">
+        <ul className="list-inside">
           {state.locations.map(({ id, location }) => {
             console.log(location);
             return (
@@ -31,12 +32,12 @@ const LocationView = ({
                 onClick={() => handleLocationClick(location)}
                 className={`${
                   activeLocation === location
-                    ? "active relative"
+                    ? "active relative marker:text-hsr-light"
                     : "hover:brightness-75"
-                } location-item cursor-pointer text-2xl p-10 outline outline-2 outline-transparent outline-offset-[-1px] mb-1 border-b-2 border-b-hsr-dark hover:outline-hsr-dark`}
+                } location-item cursor-pointer text-2xl p-8 outline outline-2 outline-transparent outline-offset-[-1px] mb-1 border-b-2 border-b-hsr-dark hover:outline-hsr-dark`}
               >
                 {activeLocation === location && (
-                  <span className="arrow-3 -left-8 top-10"></span>
+                  <SelectionArrow className="selection-arrow -left-4 top-10 w-8 absolute"></SelectionArrow>
                 )}
                 {location}
               </li>

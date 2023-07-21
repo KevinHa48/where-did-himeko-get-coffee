@@ -3,6 +3,7 @@ import MapIcon from "./map_icon";
 import { ModalProvider } from "./ModalContext";
 import CoffeeMap from "./CoffeeMap";
 import Modal from "./Modal";
+import RepoButton from "./RepoButton";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         </div>
         <div className="flex h-[75vh] my-10 md:my-2 grow">
           <CoffeeMap />
+          <RepoButton />
           <Modal />
         </div>
         <span className="text-xl font-medium text-hsr-light drop-shadow-[1px_1px_1px_rgba(0,0,0,1)]">
